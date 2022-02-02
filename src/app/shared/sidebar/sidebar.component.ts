@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { GifsService } from '../../gifs/services/gifs.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-sidebar',
@@ -14,6 +15,14 @@ export class SidebarComponent  {
   }
 
   constructor(private gifsService: GifsService) { }
+
+  buscar(termino: string){
+    
+    this.gifsService.buscarGifs( termino);
+    
+   
+    
+  }
 
  
 
